@@ -53,6 +53,18 @@ class HashMap {
     return null;
   }
 
+  has(key) {
+    const index = this.hash(key);
+    const bucket = this.buckets[index];
+
+    for (let i = 0; i < bucket.length; i++) {
+      if (bucket[i][0] === key) {
+        return true;
+      }
+    }
+    return false;
+  }
+
   resize() {
     const newCapacity = this.capacity * 2;
     const newBuckets = new Array(newCapacity).fill(null).map(() => []);
