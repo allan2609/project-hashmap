@@ -137,3 +137,5 @@ class HashMap {
     this.buckets = newBuckets;
   }
 }
+
+export default HashMap;
