@@ -138,4 +138,4 @@ class HashMap {
   }
 }
 
-export default HashMap;
+module.exports = HashMap;
