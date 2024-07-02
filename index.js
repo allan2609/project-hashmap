@@ -137,7 +137,3 @@ class HashMap {
     this.buckets = newBuckets;
   }
 }
-
-const map = new HashMap();
-map.set("apple", "fruit");
-console.log(map.get("apple")); 
