@@ -14,3 +14,23 @@ test.set('ice cream', 'white')
 test.set('jacket', 'blue')
 test.set('kite', 'pink')
 test.set('lion', 'golden')
+
+console.log("Initial bucket distribution:");
+printBucketDistribution(test);
+console.log("Load factor:", test.size / test.capacity);
+
+test.set('apple', 'green')
+test.set('moon', 'silver')
+
+console.log(test.length());
+console.log(test.entries());
+
+console.log("Bucket distribution after changes:");
+printBucketDistribution(test);
+console.log("Load factor:", test.size / test.capacity);
+
+function printBucketDistribution(map) {
+  for (let i = 0; i < map.buckets.length; i++) {
+    console.log(`Bucket ${i}: ${map.buckets[i].length} items`);
+  }
+}
